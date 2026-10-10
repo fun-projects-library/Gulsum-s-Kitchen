@@ -11,6 +11,7 @@ import icliKofteImg      from '../assets/icli_kofte.jpg'
 import karniyarikImg     from '../assets/karniyarik.jpg'
 import karisikDolmaImg   from '../assets/karisik_dolma.webp'
 import kiymaliBoregiImg  from '../assets/kiymali_kol_boregi.webp'
+import mantiImg          from '../assets/manti.jpg'
 import suBoregiImg       from '../assets/su_boregi.webp'
 import kuruFasulyeImg    from '../assets/kuru_fasulye.jpg'
 import lahanaS           from '../assets/lahana_sarmasi.webp'
@@ -201,6 +202,30 @@ export const meals = [
     ],
     image: firindaTavukImg,
     tags: ["chicken", "family-friendly"],
+  },
+  {
+    id: "manti",
+    name: "Mantı",
+    nameEn: "Turkish Dumplings",
+    category: "Main Course",
+    price: 30,
+    serves: "4–6 people",
+    shortDesc: "Tiny hand-folded dumplings filled with spiced lamb, served with garlic yogurt and chili butter.",
+    description:
+      "Mantı is Turkey's answer to dumplings — and arguably the most labor-intensive dish in all of Turkish cuisine. Each tiny dumpling is hand-folded from thin dough and filled with a small amount of seasoned ground lamb or beef. They are boiled until tender, then served in a pool of cold garlic yogurt and drizzled with sizzling chili-infused butter and dried mint. The combination of warm dumplings, cool tangy yogurt, and fiery butter is utterly extraordinary. Gülsüm folds every single one by hand — a true act of love.",
+    ingredients: [
+      "All-purpose flour",
+      "Eggs",
+      "Ground lamb or beef",
+      "Onion",
+      "Salt & black pepper",
+      "Full-fat yogurt",
+      "Garlic",
+      "Butter",
+      "Red pepper flakes & dried mint",
+    ],
+    image: mantiImg,
+    tags: ["meat", "popular", "special"],
   },
   {
     id: "kiymali-kol-boregi",
