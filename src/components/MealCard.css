@@ -1,0 +1,165 @@
+.meal-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  cursor: pointer;
+}
+
+.meal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.meal-card:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 2px;
+}
+
+/* Image */
+.meal-card__img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--light-beige);
+  flex-shrink: 0;
+}
+
+.meal-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.meal-card:hover .meal-card__img {
+  transform: scale(1.04);
+}
+
+.meal-card__img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  background: var(--light-beige);
+}
+
+.meal-card__category {
+  position: absolute;
+  top: 0.65rem;
+  left: 0.65rem;
+  background: rgba(44,24,16,0.72);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.55rem;
+  border-radius: 50px;
+  backdrop-filter: blur(4px);
+}
+
+/* Body */
+.meal-card__body {
+  padding: 1rem 1.1rem 0.75rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.meal-card__title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.meal-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark-brown);
+  line-height: 1.25;
+}
+
+.meal-card__price {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--terracotta);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.meal-card__name-en {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.meal-card__desc {
+  font-size: 0.85rem;
+  color: var(--medium-brown);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.meal-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.meal-card__serves {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.meal-card__tags {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.meal-card__tag {
+  font-size: 0.68rem;
+  font-weight: 500;
+  background: var(--light-beige);
+  color: var(--medium-brown);
+  padding: 0.2rem 0.45rem;
+  border-radius: 50px;
+  text-transform: capitalize;
+}
+
+/* CTA strip */
+.meal-card__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.7rem;
+  background: var(--light-beige);
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--terracotta);
+  letter-spacing: 0.02em;
+  transition: background 0.18s, color 0.18s;
+}
+
+.meal-card:hover .meal-card__cta {
+  background: var(--terracotta);
+  color: #fff;
+}

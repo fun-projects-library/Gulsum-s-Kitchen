@@ -1,0 +1,343 @@
+// =============================================
+// GÜLSÜM'S KITCHEN — Meal Data
+// =============================================
+
+import cigKofteImg       from '../assets/cig_kofte.avif'
+import gullacImg         from '../assets/gullac.webp'
+import sekerPareImg      from '../assets/sekerpare_tatlisi.webp'
+import firindaTavukImg   from '../assets/firinda_tavuk.webp'
+import hunkarBegendi     from '../assets/hunkar_begendi.jpeg'
+import icliKofteImg      from '../assets/icli_kofte.jpg'
+import karniyarikImg     from '../assets/karniyarik.jpg'
+import karisikDolmaImg   from '../assets/karisik_dolma.webp'
+import kiymaliBoregiImg  from '../assets/kiymali_kol_boregi.webp'
+import suBoregiImg       from '../assets/su_boregi.webp'
+import kuruFasulyeImg    from '../assets/kuru_fasulye.jpg'
+import lahanaS           from '../assets/lahana_sarmasi.webp'
+import pilavImg          from '../assets/pirinc_pilavi.webp'
+import yaprakS           from '../assets/yaprak_sarmasi.webp'
+
+export const meals = [
+  {
+    id: "sarma",
+    name: "Sarma",
+    nameEn: "Stuffed Grape Leaves",
+    category: "Main Course",
+    price: 30,
+    serves: "4–6 people",
+    shortDesc: "Tender grape leaves hand-rolled with spiced rice and slow-cooked to perfection.",
+    description:
+      "Sarma is one of the most iconic dishes of Turkish cuisine. Each leaf is carefully hand-rolled around a fragrant filling of rice, onions, dried currants, pine nuts, and a warm blend of spices including allspice, cinnamon, and black pepper. Slow-cooked in olive oil and lemon juice, they're served at room temperature with a squeeze of fresh lemon and creamy yogurt on the side. This is comfort food at its finest — Gülsüm's recipe has been perfected over decades.",
+    ingredients: [
+      "Grape leaves (fresh or brined)",
+      "Short-grain rice",
+      "Onions",
+      "Pine nuts",
+      "Dried currants",
+      "Olive oil",
+      "Lemon juice",
+      "Allspice, cinnamon, black pepper",
+      "Fresh dill & mint",
+    ],
+    image: yaprakS,
+    tags: ["vegetarian", "popular"],
+  },
+  {
+    id: "karisik-dolma",
+    name: "Karışık Dolma",
+    nameEn: "Mixed Stuffed Vegetables",
+    category: "Main Course",
+    price: 35,
+    serves: "4–6 people",
+    shortDesc: "A colorful platter of stuffed peppers, tomatoes, and zucchini filled with fragrant spiced rice.",
+    description:
+      "Karışık Dolma is a gorgeous spread of stuffed vegetables — bell peppers, tomatoes, and zucchini are each filled with a fragrant mixture of rice, onions, pine nuts, currants, and aromatic spices, then slow-cooked in olive oil until meltingly tender. Every vegetable brings its own flavor to the filling, making each bite a little different. Served at room temperature with a wedge of lemon and cold yogurt, this dish is as beautiful to look at as it is to eat.",
+    ingredients: [
+      "Bell peppers (green & red)",
+      "Tomatoes",
+      "Zucchini",
+      "Short-grain rice",
+      "Pine nuts & currants",
+      "Olive oil & lemon",
+      "Onions",
+      "Allspice, cinnamon, mint, dill",
+    ],
+    image: karisikDolmaImg,
+    tags: ["vegetarian", "crowd-pleaser"],
+  },
+  {
+    id: "lahana-sarmasi",
+    name: "Lahana Sarması",
+    nameEn: "Stuffed Cabbage Rolls",
+    category: "Main Course",
+    price: 30,
+    serves: "4–6 people",
+    shortDesc: "Tender cabbage leaves rolled around a savory meat and rice filling, slow-cooked in tomato broth.",
+    description:
+      "Lahana Sarması is the heartier, winter cousin of the grape leaf Sarma — blanched cabbage leaves are wrapped around a rich filling of ground beef, rice, onions, and spices, then nestled tightly into a pot and slow-cooked in a tangy tomato broth. As they simmer, the cabbage becomes silky and the filling soaks up all the deep, savory flavors of the broth. This is the kind of warming, soul-satisfying dish that reminds you why home cooking is the best cooking.",
+    ingredients: [
+      "White cabbage",
+      "Ground beef",
+      "Short-grain rice",
+      "Onions",
+      "Tomatoes & tomato paste",
+      "Olive oil & butter",
+      "Red pepper paste",
+      "Mint, allspice, black pepper",
+    ],
+    image: lahanaS,
+    tags: ["meat", "hearty", "popular"],
+  },
+  {
+    id: "karni-yarik",
+    name: "Karnı Yarık",
+    nameEn: "Split-Belly Stuffed Eggplant",
+    category: "Main Course",
+    price: 30,
+    serves: "4–6 people",
+    shortDesc: "Roasted eggplants split and filled with savory spiced ground beef and tomatoes.",
+    description:
+      "Karnı Yarık — literally 'split belly' — is a beloved Turkish classic where whole eggplants are roasted until silky soft, then split open and filled with a savory mixture of sautéed ground beef, onions, garlic, tomatoes, and a medley of spices. The stuffed eggplants are then baked until caramelized and golden. Served over fluffy rice pilaf and garnished with fresh parsley, this is hearty, deeply flavorful home cooking at its very best.",
+    ingredients: [
+      "Italian eggplants",
+      "Ground beef",
+      "Onions & garlic",
+      "Tomatoes & tomato paste",
+      "Green peppers",
+      "Olive oil",
+      "Parsley",
+      "Cumin, black pepper",
+    ],
+    image: karniyarikImg,
+    tags: ["meat", "popular"],
+  },
+  {
+    id: "icli-kofte",
+    name: "İçli Köfte",
+    nameEn: "Stuffed Bulgur Meatballs",
+    category: "Main Course",
+    price: 30,
+    serves: "4–6 people",
+    shortDesc: "Crispy bulgur shells filled with spiced ground beef, walnuts, and caramelized onions.",
+    description:
+      "İçli Köfte are oval-shaped masterpieces — a thin, crispy outer shell made from fine bulgur wheat encases a rich filling of ground beef sautéed with onions, walnuts, and fragrant spices. They are then deep-fried until gloriously golden and crunchy on the outside while staying juicy and flavorful inside. These take tremendous skill and patience to prepare, and Gülsüm makes each one by hand. Served with fresh parsley and lemon wedges, they are absolutely irresistible.",
+    ingredients: [
+      "Fine bulgur wheat",
+      "Ground beef (shell & filling)",
+      "Onions",
+      "Walnuts",
+      "Butter",
+      "Cumin, red pepper flakes",
+      "Parsley",
+      "Lemon",
+    ],
+    image: icliKofteImg,
+    tags: ["meat", "fried", "popular"],
+  },
+  {
+    id: "kuru-fasulye",
+    name: "Kuru Fasulye",
+    nameEn: "Turkish White Bean Stew",
+    category: "Main Course",
+    price: 28,
+    serves: "4–6 people",
+    shortDesc: "A hearty, slow-simmered white bean stew in rich tomato broth — Turkey's most beloved comfort dish.",
+    description:
+      "Kuru Fasulye is Turkey's ultimate comfort food — white beans slow-simmered for hours in a deeply flavored tomato and pepper sauce, often with tender pieces of beef or lamb. This dish is a staple of every Turkish household and is almost always served alongside fluffy rice pilaf and a simple salad. Gülsüm's version is slow-cooked to perfection, allowing the beans to absorb all the rich flavors of the broth. Simple, nourishing, and deeply satisfying.",
+    ingredients: [
+      "Dried white beans (navy beans)",
+      "Beef (optional)",
+      "Onions",
+      "Tomatoes & tomato paste",
+      "Olive oil",
+      "Red pepper paste",
+      "Bay leaves",
+      "Salt & black pepper",
+    ],
+    image: kuruFasulyeImg,
+    tags: ["stew", "hearty"],
+  },
+  {
+    id: "hunkar-begendi",
+    name: "Hünkar Beğendi",
+    nameEn: "Sultan's Delight",
+    category: "Main Course",
+    price: 35,
+    serves: "4–6 people",
+    shortDesc: "Tender lamb stew served on a luscious smoked eggplant and cheese purée. A true Ottoman classic.",
+    description:
+      "Hünkar Beğendi — 'The Sultan Was Pleased' — is one of the most celebrated dishes of Ottoman palace cuisine. Slow-braised lamb or beef sits on a velvety bed of smoked eggplant purée enriched with butter, milk, and Gruyère cheese. The contrast between the rich, savory meat and the silky, smoky eggplant cream is simply extraordinary. This dish has graced the tables of sultans and is now brought to you from Gülsüm's kitchen with the same care and tradition.",
+    ingredients: [
+      "Lamb shoulder (or beef)",
+      "Eggplants (smoked/roasted)",
+      "Butter & flour",
+      "Whole milk",
+      "Gruyère or kashar cheese",
+      "Onions & garlic",
+      "Tomatoes",
+      "Thyme, bay leaf",
+    ],
+    image: hunkarBegendi,
+    tags: ["meat", "ottoman", "special"],
+  },
+  {
+    id: "firinda-tavuk",
+    name: "Fırında Tavuk",
+    nameEn: "Oven-Roasted Chicken",
+    category: "Main Course",
+    price: 28,
+    serves: "4–6 people",
+    shortDesc: "Juicy whole chicken marinated in yogurt and spices, roasted until golden and fragrant.",
+    description:
+      "Fırında Tavuk is the Turkish oven-roasted chicken that puts every other roast chicken to shame. The chicken is marinated overnight in a yogurt-based marinade with olive oil, garlic, lemon zest, paprika, and herbs, which tenderizes the meat beautifully and creates a stunning golden skin. Surrounded by vegetables that roast alongside and absorb all the wonderful pan juices, this is a meal that fills your home with incredible aromas. Served with rice pilaf and a crisp salad.",
+    ingredients: [
+      "Whole chicken",
+      "Full-fat yogurt",
+      "Olive oil",
+      "Garlic & lemon",
+      "Paprika, cumin, thyme",
+      "Potatoes & onions (roasted alongside)",
+      "Fresh rosemary",
+    ],
+    image: firindaTavukImg,
+    tags: ["chicken", "family-friendly"],
+  },
+  {
+    id: "kiymali-kol-boregi",
+    name: "Kıymalı Kol Böreği",
+    nameEn: "Rolled Meat Börek",
+    category: "Main Course",
+    price: 30,
+    serves: "4–6 people",
+    shortDesc: "Crispy, paper-thin phyllo dough rolled with spiced ground beef and baked to golden perfection.",
+    description:
+      "Kıymalı Kol Böreği is one of the most satisfying dishes in Turkish cuisine — layers of paper-thin yufka (phyllo) dough are brushed with butter and filled with a savory mixture of spiced ground beef and onions, then rolled into a long log, coiled into a baking tray, and baked until deeply golden and irresistibly crispy. Every bite delivers a satisfying crunch that gives way to a juicy, flavorful meat filling inside. Gülsüm prepares this börek with the same patience and care passed down through generations.",
+    ingredients: [
+      "Yufka (phyllo dough)",
+      "Ground beef",
+      "Onions",
+      "Butter & olive oil",
+      "Tomato paste",
+      "Red pepper flakes",
+      "Parsley",
+      "Salt & black pepper",
+    ],
+    image: kiymaliBoregiImg,
+    tags: ["meat", "pastry", "popular"],
+  },
+  {
+    id: "su-boregi",
+    name: "Su Böreği",
+    nameEn: "Water Börek",
+    category: "Main Course",
+    price: 30,
+    serves: "4–6 people",
+    shortDesc: "Silky, layered börek with a soft cheese and parsley filling — the crown jewel of Turkish pastry.",
+    description:
+      "Su Böreği — literally 'water börek' — is considered the queen of all Turkish böreks. The dough sheets are briefly boiled in water before being layered with a generous filling of white cheese and fresh parsley, then baked in butter until the top is golden and slightly crisp while the inside stays impossibly soft and silky. It is the kind of dish that takes real time and skill to make properly, and Gülsüm's su böreği is a labor of love that her family and friends have always adored.",
+    ingredients: [
+      "Homemade börek dough (or yufka)",
+      "White cheese (beyaz peynir or feta)",
+      "Fresh parsley",
+      "Butter",
+      "Eggs",
+      "Whole milk",
+      "Salt",
+    ],
+    image: suBoregiImg,
+    tags: ["vegetarian", "pastry", "special"],
+  },
+  {
+    id: "pirinc-pilavi",
+    name: "Pirinç Pilavı",
+    nameEn: "Turkish Rice Pilaf",
+    category: "Side Dish",
+    price: 15,
+    serves: "4–6 people",
+    shortDesc: "Buttery, perfectly fluffy rice pilaf — the essential companion to every Turkish meal.",
+    description:
+      "Pirinç Pilavı is not just plain rice — it is an art form in Turkish cuisine. Long-grain rice is first toasted in butter until lightly golden, then simmered in a rich chicken broth until each grain is perfectly separate and fluffy. The result is an aromatic, buttery pilaf with a delicate golden crust at the bottom (the most coveted part!). It is the essential companion to almost every Turkish main dish and stands beautifully on its own too. Simple perfection.",
+    ingredients: [
+      "Long-grain rice (baldo or basmati)",
+      "Butter",
+      "Chicken broth (homemade)",
+      "Salt",
+      "Vermicelli noodles (optional)",
+    ],
+    image: pilavImg,
+    tags: ["side", "vegetarian"],
+  },
+  {
+    id: "gullac",
+    name: "Güllaç",
+    nameEn: "Ottoman Milk Dessert",
+    category: "Dessert",
+    price: 20,
+    serves: "4–6 people",
+    shortDesc: "Delicate rose-water milk-soaked wafers layered with pomegranate and walnuts — an Ottoman palace classic.",
+    description:
+      "Güllaç is one of the oldest and most elegant desserts in Turkish cuisine, with roots stretching back to the Ottoman palace kitchens. Thin, translucent wafers made from rice starch are soaked in warm sweetened milk perfumed with rose water, then layered with crushed walnuts and pomegranate seeds. The result is an impossibly light, floral, and refreshing dessert that melts on the tongue. Traditionally made during Ramadan, Gülsüm's version is so good she makes it year-round.",
+    ingredients: [
+      "Güllaç wafers (rice starch sheets)",
+      "Whole milk",
+      "Sugar",
+      "Rose water",
+      "Walnuts",
+      "Pomegranate seeds",
+      "Mint (for garnish)",
+    ],
+    image: gullacImg,
+    tags: ["dessert", "vegetarian", "ottoman"],
+  },
+  {
+    id: "sekerpare-tatlisi",
+    name: "Şekerpare Tatlısı",
+    nameEn: "Syrup-Soaked Semolina Cookies",
+    category: "Dessert",
+    price: 20,
+    serves: "4–6 people",
+    shortDesc: "Soft, melt-in-your-mouth semolina cookies soaked in fragrant lemon syrup and topped with a single almond.",
+    description:
+      "Şekerpare — meaning 'a piece of sweetness' — are one of Turkey's most beloved traditional pastries. These soft, dome-shaped cookies are made from a buttery semolina and flour dough, baked until just golden, then immediately soaked in a warm lemon-scented sugar syrup that they absorb completely. The result is an incredibly tender, moist, and fragrant treat that practically dissolves in your mouth. Each one is crowned with a single almond before baking, giving them their signature look. Completely irresistible.",
+    ingredients: [
+      "Semolina",
+      "All-purpose flour",
+      "Butter",
+      "Powdered sugar",
+      "Eggs",
+      "Baking powder",
+      "Almonds (for topping)",
+      "Sugar syrup with lemon",
+    ],
+    image: sekerPareImg,
+    tags: ["dessert", "vegetarian", "sweet"],
+  },
+  {
+    id: "cig-kofte",
+    name: "Çiğ Köfte",
+    nameEn: "Spiced Bulgur Rolls",
+    category: "Appetizer / Snack",
+    price: 20,
+    serves: "4–6 people",
+    shortDesc: "Vibrant, hand-kneaded spiced bulgur rolls served in lettuce wraps with lemon and pomegranate.",
+    description:
+      "Çiğ Köfte are a beloved Turkish street food — hand-kneaded bulgur mixed with tomato paste, onion, and an aromatic blend of spices until the mixture becomes soft and pliable. Shaped into small oval portions and wrapped in crisp lettuce leaves with a squeeze of lemon and a drizzle of pomegranate molasses, they are fresh, vibrant, and absolutely addictive. This is the vegetarian version (as made today in Turkey) and makes a perfect light appetizer, snack, or side dish. Utterly refreshing.",
+    ingredients: [
+      "Fine bulgur wheat",
+      "Tomato paste & red pepper paste",
+      "Onions",
+      "Spring onions",
+      "Parsley & mint",
+      "Pomegranate molasses",
+      "Lemon juice",
+      "Cumin, red pepper flakes",
+      "Lettuce leaves (for serving)",
+    ],
+    image: cigKofteImg,
+    tags: ["vegetarian", "street-food", "appetizer"],
+  },
+]
+
+export function getMealById(id) {
+  return meals.find((m) => m.id === id) || null
+}
