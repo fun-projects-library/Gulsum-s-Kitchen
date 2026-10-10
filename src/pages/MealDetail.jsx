@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { getMealById, meals } from '../data/meals'
+import { getMealById, meals, offersExtraProtein } from '../data/meals'
 import MealCard from '../components/MealCard'
 import './MealDetail.css'
 
@@ -82,6 +82,10 @@ export default function MealDetail() {
                 </div>
               </div>
             </div>
+
+            {offersExtraProtein(meal) && (
+              <p className="meal-detail__protein">Add extra protein for $6.</p>
+            )}
 
             <p className="meal-detail__description">{meal.description}</p>
 

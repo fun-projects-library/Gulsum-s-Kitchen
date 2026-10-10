@@ -24,7 +24,7 @@ export const meals = [
     name: "Sarma",
     nameEn: "Stuffed Grape Leaves",
     category: "Main Course",
-    price: 40,
+    price: 50,
     serves: "4–6 people",
     shortDesc: "Tender grape leaves hand-rolled with spiced rice and slow-cooked to perfection.",
     description:
@@ -48,7 +48,7 @@ export const meals = [
     name: "Karışık Dolma",
     nameEn: "Mixed Stuffed Vegetables",
     category: "Main Course",
-    price: 35,
+    price: 40,
     serves: "4–6 people",
     shortDesc: "A colorful platter of stuffed peppers, tomatoes, and zucchini filled with fragrant spiced rice.",
     description:
@@ -71,7 +71,7 @@ export const meals = [
     name: "Lahana Sarması",
     nameEn: "Stuffed Cabbage Rolls",
     category: "Main Course",
-    price: 40,
+    price: 50,
     serves: "4–6 people",
     shortDesc: "Tender cabbage leaves rolled around herbed rice, onion, and tomato, slow-cooked in olive oil.",
     description:
@@ -95,7 +95,7 @@ export const meals = [
     name: "Karnı Yarık",
     nameEn: "Split-Belly Stuffed Eggplant",
     category: "Main Course",
-    price: 45,
+    price: 55,
     serves: "4–6 people",
     shortDesc: "Roasted eggplants split and filled with savory spiced ground beef and tomatoes.",
     description:
@@ -118,7 +118,7 @@ export const meals = [
     name: "İçli Köfte",
     nameEn: "Stuffed Bulgur Meatballs",
     category: "Main Course",
-    price: 50,
+    price: 60,
     serves: "4–6 people",
     shortDesc: "Crispy bulgur shells filled with spiced ground beef, walnuts, and caramelized onions.",
     description:
@@ -141,7 +141,7 @@ export const meals = [
     name: "Kuru Fasulye",
     nameEn: "Turkish White Bean Stew",
     category: "Main Course",
-    price: 28,
+    price: 40,
     serves: "4–6 people",
     shortDesc: "A hearty, slow-simmered white bean stew in rich tomato broth — Turkey's most beloved comfort dish.",
     description:
@@ -164,7 +164,7 @@ export const meals = [
     name: "Hünkar Beğendi",
     nameEn: "Sultan's Delight",
     category: "Main Course",
-    price: 35,
+    price: 40,
     serves: "4–6 people",
     shortDesc: "Tender lamb stew served on a luscious smoked eggplant and cheese purée. A true Ottoman classic.",
     description:
@@ -187,7 +187,7 @@ export const meals = [
     name: "Fırında Tavuk",
     nameEn: "Oven-Roasted Chicken",
     category: "Main Course",
-    price: 28,
+    price: 40,
     serves: "4–6 people",
     shortDesc: "Juicy whole chicken marinated in yogurt and spices, roasted until golden and fragrant.",
     description:
@@ -209,7 +209,7 @@ export const meals = [
     name: "Mantı",
     nameEn: "Turkish Dumplings",
     category: "Main Course",
-    price: 40,
+    price: 50,
     serves: "4–6 people",
     shortDesc: "Tiny hand-folded dumplings filled with spiced lamb, served with garlic yogurt and chili butter.",
     description:
@@ -298,7 +298,7 @@ export const meals = [
     name: "Güllaç",
     nameEn: "Ottoman Milk Dessert",
     category: "Dessert",
-    price: 20,
+    price: 30,
     serves: "4–6 people",
     shortDesc: "Delicate rose-water milk-soaked wafers layered with pomegranate and walnuts — an Ottoman palace classic.",
     description:
@@ -320,7 +320,7 @@ export const meals = [
     name: "Şekerpare Tatlısı",
     nameEn: "Syrup-Soaked Semolina Cookies",
     category: "Dessert",
-    price: 25,
+    price: 30,
     serves: "4–6 people",
     shortDesc: "Soft, melt-in-your-mouth semolina cookies soaked in fragrant lemon syrup and topped with a single almond.",
     description:
@@ -343,7 +343,7 @@ export const meals = [
     name: "Çiğ Köfte",
     nameEn: "Spiced Bulgur Rolls",
     category: "Appetizer / Snack",
-    price: 20,
+    price: 30,
     serves: "4–6 people",
     shortDesc: "Vibrant, hand-kneaded spiced bulgur rolls served in lettuce wraps with lemon and pomegranate.",
     description:
@@ -363,6 +363,10 @@ export const meals = [
     tags: ["vegetarian", "street-food", "appetizer"],
   },
 ]
+
+export function offersExtraProtein(meal) {
+  return meal.tags.includes('meat') || meal.tags.includes('chicken') || meal.id === 'kuru-fasulye'
+}
 
 export function getMealById(id) {
   return meals.find((m) => m.id === id) || null

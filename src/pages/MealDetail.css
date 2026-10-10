@@ -151,6 +151,13 @@
   color: var(--text-muted);
 }
 
+.meal-detail__protein {
+  margin: -0.35rem 0 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--terracotta);
+}
+
 /* Description */
 .meal-detail__description {
   font-size: 0.95rem;

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { offersExtraProtein } from '../data/meals'
 import './MealCard.css'
 
 const TAG_ICONS = {
@@ -48,6 +49,9 @@ export default function MealCard({ meal }) {
         </div>
         <p className="meal-card__name-en">{meal.nameEn}</p>
         <p className="meal-card__desc">{meal.shortDesc}</p>
+        {offersExtraProtein(meal) && (
+          <p className="meal-card__protein">Add extra protein for $6</p>
+        )}
 
         <div className="meal-card__footer">
           <span className="meal-card__serves">👥 {meal.serves}</span>
